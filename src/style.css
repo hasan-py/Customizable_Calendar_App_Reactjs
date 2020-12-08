@@ -1,0 +1,188 @@
+.App {
+    padding: 5rem;
+}
+
+.header {
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.header-day {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 0rem;
+    grid-column: span 1 / span 7;
+}
+
+.header-mobile {
+    display: none;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.singleList {
+    grid-column: span 1 / span 7;
+    padding: 2rem 0rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    cursor: pointer;
+}
+
+.singleList:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.singleList span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.today {
+    font-size: .75rem !important;
+    background-color: black;
+    padding: .25rem;
+    color: white;
+    width: 50%;
+    border-radius: .5rem;
+}
+
+.monthYear {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.footer span {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Main Footer */
+footer {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .09rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .App {
+        padding: 1rem;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+        border-bottom: .5rem solid black;
+        margin-bottom: 2rem;
+    }
+
+    .list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .singleList {
+        grid-column: span 1 / span 1;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 2rem 0rem; 
+    }
+
+    .footer span {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        padding: .1rem 1rem;
+        border-radius: .5rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+    .App {
+        padding: .1rem;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+        border-bottom: .5rem solid black;
+        margin-bottom: 2rem;
+    }
+
+    .list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .singleList {
+        grid-column: span 1 / span 1;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0rem;
+    }
+
+    .footer span {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        padding: .1rem 1rem;
+        border-radius: .5rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+}
